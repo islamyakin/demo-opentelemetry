@@ -2,7 +2,7 @@ receivers:
   otlp:
     protocols:
       http:
-        endpoint: 0.0.0.0:4317
+        endpoint: 0.0.0.0:4318
 processors:
 extensions:
   health_check: {}
@@ -12,7 +12,7 @@ exporters:
     tls:
       insecure: true
   prometheus:
-    endpoint: prometheus:9090
+    endpoint: 0.0.0.0:9090
 service:
   pipelines:
     traces:
